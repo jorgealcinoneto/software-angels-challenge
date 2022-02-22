@@ -25,9 +25,9 @@
                 <executions>
                     <!-- Install our node and npm version to run npm/node scripts-->
                     <execution>
-                        <id>install node and yarn</id>
+                        <id>install node and npm</id>
                         <goals>
-                            <goal>install-node-and-yarn</goal>
+                            <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
                             <nodeVersion>v11.8.0</nodeVersion>
@@ -35,9 +35,9 @@
                     </execution>
                     <!-- Install all project dependencies -->
                     <execution>
-                        <id>yarn install</id>
+                        <id>npm install</id>
                         <goals>
-                            <goal>yarn</goal>
+                            <goal>npm</goal>
                         </goals>
                         <!-- optional: default phase is "generate-resources" -->
                         <phase>generate-resources</phase>
@@ -48,12 +48,12 @@
                     </execution>
                     <!-- Build and minify static files -->
                     <execution>
-                        <id>yarn build</id>
+                        <id>npm run build</id>
                         <goals>
-                            <goal>yarn</goal>
+                            <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <arguments>build</arguments>
+                            <arguments>run build</arguments>
                         </configuration>
                     </execution>
                 </executions>
