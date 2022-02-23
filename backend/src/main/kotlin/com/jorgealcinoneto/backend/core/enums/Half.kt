@@ -1,4 +1,4 @@
-package com.jorgealcinoneto.backend.enums
+package com.jorgealcinoneto.backend.core.enums
 
 import java.io.InvalidObjectException
 
