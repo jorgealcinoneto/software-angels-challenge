@@ -1,16 +1,20 @@
 package com.jorgealcinoneto.backend.core.entities
 
 import java.util.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
 
+@Entity
 data class Store(
-    val id: String,
-    val externalId: String,
-    val code: String?,
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    val id: Long,
+    val code: String,
     val description: String?,
     val name: String?,
     val openingDate: Date?,
-    val type: String?,
-    val extraFields: Map<String, String?> = emptyMap(),
-    val seasons: Set<String> = emptySet()
+    val storeType: String?
 )
 
